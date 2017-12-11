@@ -12,7 +12,7 @@ This folder contains solutions to some robotics basic problems, which is used to
 ## Run Instruction:
 1. Put hw1.m & Q1.m & Q2.m & Q3.m into MATLAB
 2. In MATLAB terminal, run
- ```
+```
 	$ startup_rvc
 ```
 3. In MATLAB terminal, run following to show corresponding programming solutions
