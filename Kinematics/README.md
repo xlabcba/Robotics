@@ -14,7 +14,9 @@ This folder contains solutions to some robotics basic problems, which is used to
 2. In MATLAB terminal, run
  
 	$ startup_rvc
+
 3. In MATLAB terminal, run 
 
 	$ hw1($QuestionNumber)
+	
 to show corresponding programming solutions
