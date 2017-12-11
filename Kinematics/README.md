@@ -10,6 +10,11 @@ This folder contains solutions to some robotics basic problems, which is used to
 * Q1.m & Q2.m & Q3.m - Solutions to 3 kinematic implementation by RTB
 
 ## Run Instruction:
-	1. Put hw1.m & Q1.m & Q2.m & Q3.m into MATLAB
-	2. In MATLAB terminal, run `startup_rvc`
-	3. In MATLAB terminal, run `hw1($QuestionNumber)` to run corresponding programming solutions
+1. Put hw1.m & Q1.m & Q2.m & Q3.m into MATLAB
+2. In MATLAB terminal, run
+ 
+	$ startup_rvc
+3. In MATLAB terminal, run 
+
+	$ hw1($QuestionNumber)
+to show corresponding programming solutions
