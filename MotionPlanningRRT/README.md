@@ -9,7 +9,7 @@ see [wikipedia](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree)
 
 * **[homework2.pdf](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/homework2.pdf)** - Description of 3 programming questions related to RRT algorithm.
 * **[hw2.m](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/hw2.m)** - Function to run solution to each question by giving corresponding question number.
-* **[robotCollision.m](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/robotCollision.m)** - Function to evaluate whether the configuration <q> is in collision with a spherical obstacle centered at <sphereCenter> with radius <r>.
+* **[robotCollision.m](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/robotCollision.m)** - Function to evaluate whether a configuration is in collision with a spherical obstacle.
 * **[Q1.m](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/Q1.m)** - This function takes two joint configurations and the parameters of the obstacle as input and calculates whether a collision free path exists between them, with robotCollision.m used.
 * **[Q2.m](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/Q2.m)** - This function calculates a path from qStart (start configuration) to xGoal (goal position) by implementing RRT algorithm, with robotCollision.m and Q1.m used.
 * **[Q3.m](https://github.com/xlabcba/Robotics/blob/master/MotionPlanningRRT/Q3.m)** - This function smooths path given in qMilestones, which is a path consisting of configurations from qStart to xGoal.
