@@ -7,12 +7,12 @@ see [wikipedia](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree)
 
 ## Folder Structure
 
-* homework2.pdf - Description of 3 programming questions related to RRT algorithm.
-* hw2.m - Function to run solution to each question by giving corresponding question number.
-* robotCollision.m - Function to evaluate whether the configuration <q> is in collision with a spherical obstacle centered at <sphereCenter> with radius <r>.
-* Q1.m - This function takes two joint configurations and the parameters of the obstacle as input and calculates whether a collision free path exists between them, with robotCollision.m used.
-* Q2.m - This function calculates a path from qStart (start configuration) to xGoal (goal position) by implementing RRT algorithm, with robotCollision.m and Q1.m used.
-* Q3.m - This function smooths path given in qMilestones, which is a path consisting of configurations from qStart to xGoal.
+* **homework2.pdf** - Description of 3 programming questions related to RRT algorithm.
+* **hw2.m** - Function to run solution to each question by giving corresponding question number.
+* **robotCollision.m** - Function to evaluate whether the configuration <q> is in collision with a spherical obstacle centered at <sphereCenter> with radius <r>.
+* **Q1.m** - This function takes two joint configurations and the parameters of the obstacle as input and calculates whether a collision free path exists between them, with robotCollision.m used.
+* **Q2.m** - This function calculates a path from qStart (start configuration) to xGoal (goal position) by implementing RRT algorithm, with robotCollision.m and Q1.m used.
+* **Q3.m** - This function smooths path given in qMilestones, which is a path consisting of configurations from qStart to xGoal.
 
 ## Run Instruction:
 1. Put hw2.m & Q1.m & Q2.m & Q3.m into MATLAB
