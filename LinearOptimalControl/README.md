@@ -8,28 +8,28 @@ see [wikipedia](https://en.wikipedia.org/wiki/Optimal_control#Linear_quadratic_c
 > **Linear Quadratic Control** is a special case of the general nonlinear optimal control problem, which can be stated as following:
 Minimize the *quadratic* continuous-time cost function:
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/quadraticCost.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/quadraticCost.png"/></p>
 
 > Subject to the *linear* first-order dynamic constraints
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/linearConstraint.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/linearConstraint.png"/></p>
 
 > and the initial condition
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/initialCondition.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/initialCondition.png"/></p>
 
 > **Linear Quadratic Regulator (LQR)** is a particular form of the LQ problem that arises in many control system problems where all of the matrices (i.e. **A**, **B**, **Q**, and **R**) are constant, the initial time is arbitrarily set to zero, and the terminal time is taken in the limit t<sub>f</sub> → ∞ (this last assumption is what is known as infinite horizon). This can be stated as following:
 Minimize the infinite horizon quadratic continuous-time cost function:
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/quadraticContinuousCost.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/quadraticContinuousCost.png"/></p>
 
 > Subject to the *linear time-invariant* first-order dynamic constraints
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/linearTimeVariantConstraint.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/linearTimeVariantConstraint.png"/></p>
 
 > and the initial condition
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/initialCondition.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/LinearOptimalControl/figures/initialCondition.png"/></p>
 
 > In the finite-horizon case the matrices are restricted in that **Q** and **R** are positive semi-definite and positive definite, respectively. In the infinite-horizon case, however, the matrices **Q** and **R** are not only positive-semidefinite and positive-definite, respectively, but are also constant. These additional restrictions on **Q** and **R** in the infinite-horizon case are enforced to ensure that the cost function remains positive. Furthermore, in order to ensure that the cost function is bounded, the additional restriction is imposed that the pair **(A, B)** is controllable. Note that the LQ or LQR cost functional can be thought of physically as attempting to minimize the control energy (measured as a quadratic form).
 
