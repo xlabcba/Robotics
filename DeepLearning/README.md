@@ -3,31 +3,37 @@
 ## Convolutional Neural Network (CNN) Introduction
 see [DeepLearningTutorial](http://deeplearning.net/tutorial/lenet.html#the-full-model-lenet)
 
-> **Motivation** 
+### Motivation
+
 >Convolutional Neural Networks (CNN) are biologically-inspired variants of MLPs. 
+
 >Visual cortex contains a complex arrangement of cells. These cells are sensitive to small sub-regions of the visual field, called a receptive field. The sub-regions are tiled to cover the entire visual field. These cells act as local filters over the input space and are well-suited to exploit the strong spatially local correlation present in natural images.
+
 >Additionally, two basic cell types have been identified: Simple cells respond maximally to specific edge-like patterns within their receptive field. Complex cells have larger receptive fields and are locally invariant to the exact position of the pattern.
 The animal visual cortex being the most powerful visual processing system in existence, it seems natural to emulate its behavior.
 
-> **Features**
+### Features
 
-> **Sparse Connectivity**
+**1. Sparse Connectivity**
+
 >CNNs exploit spatially-local correlation by enforcing a local connectivity pattern between neurons of adjacent layers. In other words, the inputs of hidden units in layer m are from a subset of units in layer m-1, units that have spatially contiguous receptive fields. We can illustrate this graphically as follows:
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/DeepLearning/figures/SparseConnectivity.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/DeepLearning/figures/SparseConnectivity.png"/></p>
 
 >Imagine that layer m-1 is the input retina. In the above figure, units in layer m have receptive fields of width 3 in the input retina and are thus only connected to 3 adjacent neurons in the retina layer. Units in layer m+1 have a similar connectivity with the layer below. We say that their receptive field with respect to the layer below is also 3, but their receptive field with respect to the input is larger (5). Each unit is unresponsive to variations outside of its receptive field with respect to the retina. The architecture thus ensures that the learnt “filters” produce the strongest response to a spatially local input pattern.
 
-> **Shared Weights**
+**2. Shared Weights**
+
 >In CNNs, each filter h<sub>i</sub> is replicated across the entire visual field. These replicated units share the same parameterization (weight vector and bias) and form a *feature map*.
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/DeepLearning/figures/FeatureMap.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/DeepLearning/figures/FeatureMap.png"/></p>
 
 >In the above figure, we show 3 hidden units belonging to the same feature map. Weights of the same color are shared—constrained to be identical. Gradient descent can still be used to learn such shared parameters, with only a small change to the original algorithm. The gradient of a shared weight is simply the sum of the gradients of the parameters being shared.
 
 >Replicating units in this way allows for features to be detected regardless of their position in the visual field. Additionally, weight sharing increases learning efficiency by greatly reducing the number of free parameters being learnt. The constraints on the model enable CNNs to achieve better generalization on vision problems.
 
-> **MaxPooling**
+**3. MaxPooling**
+
 >Another important concept of CNNs is max-pooling, which is a form of non-linear down-sampling. Max-pooling partitions the input image into a set of non-overlapping rectangles and, for each such sub-region, outputs the maximum value.
 
 >Max-pooling is useful in vision for two reasons:
@@ -36,10 +42,11 @@ The animal visual cortex being the most powerful visual processing system in exi
 
 >Since it provides additional robustness to position, max-pooling is a “smart” way of reducing the dimensionality of intermediate representations.
 
-> **Full Model: LeNet
+### Full Model: LeNet
+
 >Sparse, convolutional layers and max-pooling are at the heart of the LeNet family of models. While the exact details of the model will vary greatly, the figure below shows a graphical depiction of a LeNet model.
 
-<img src="https://github.com/xlabcba/Robotics/blob/master/DeepLearning/figures/LeNet.png"/>
+<p align="center"><img src="https://github.com/xlabcba/Robotics/blob/master/DeepLearning/figures/LeNet.png"/></p>
 
 >The lower-layers are composed to alternating convolution and max-pooling layers. The upper-layers however are fully-connected and correspond to a traditional MLP (hidden layer + logistic regression). The input to the first fully-connected layer is the set of all features maps at the layer below.
 
